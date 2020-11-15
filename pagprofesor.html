@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisro de calificaciones</title>
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="diseños/calificacion.css">
+    <style>
+        body{
+            background-image: url("Imagenes/fondoescuela.png");
+            background-size: cover;
+        }
+        .encabezado3{
+            background-image: url("Imagenes/fondoescuela.png");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <header class="encabezado3">
+        <div class="columns">
+            <div class="column">
+                <figure class="image is-128x128">
+                    <img class="is-rounded" src="Imagenes/Logoprimitivo.png">
+                </figure>
+            </div>
+            <div class="column" id="titulohead3">
+              ESCUELA PRIMITIVO ALONSO IMEE CAMPESTREE
+            </div>
+            <div class="column">
+              </div>
+        </div>
+    </header>
+
+    <h1 id="titulo">BIENVENIDO AQUI PODRA REALIZAR EL REGISTRO DE LAS CALIFICACIONES</h1>
+    <br>
+    
+    <p class="subtitulos">Ingresar las calificaciones de los alumnos junto con las asignaturas</p>
+    <br>
+
+    <p id="datos">INGRESA LAS CALIFICACIONES:</p>
+    <br>
+    <div class="card card-width='100'" id="CardFormulario">
+        <header class="card-header">
+          <p class="card-header-title">
+            Formulario de registro de calificaciones:
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <form action="calificaciones_insertar.php" method="POST">
+                <label for="asignatura1">Nombre de la asignatura:</label>
+                <input id="asignatura1" class="input is-rounded" type="text" name="asignatura1" placeholder="Asignatura">
+                <label for="calificacion1">Calificación de asignatura:</label>
+                <input id="calificacion1" class="input is-rounded" type="text" name="calificacion1" placeholder="Calificación">
+                <label for="asignatura2">Nombre de la asignatura:</label>
+                <input id="asignatura2" class="input is-rounded" type="text" name="asignatura2" placeholder="Asignatura">
+                <label for="calificacion2">Calificación de asignatura:</label>
+                <input id="calificacion2" class="input is-rounded" type="text" name="calificacion2" placeholder="Calificación">
+                <label for="asignatura3">Nombre de la asignatura:</label>
+                <input id="asignatura3" class="input is-rounded" type="text" name="asignatura3" placeholder="Asignatura">
+                <label for="calificacion3">Calificación de asignatura:</label>
+                <input id="calificacion3" class="input is-rounded" type="text" name="calificacion3" placeholder="Calificación">
+                <div id="botones">
+                    <button type="submit" class="button is-dark">Subir calificaciones</button>
+                </div>
+            </form>
+            <p>Consultar las calificaciones ingresadas:</p>
+            <form action="consultar_profesor.php" method="GET">
+                <button type="submit" class="button is-dark is-rounded">Consultar calificaciones</button>
+            </form>
+          </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+</body>
+</html>
